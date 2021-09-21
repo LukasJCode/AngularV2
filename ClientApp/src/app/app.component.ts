@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'my-app',
   template: `
-            <list-employee></list-employee>
+           <list-employee></list-employee>
 
 `
   //  <button [disabled] = 'isDisabled'> Click Me</button> //property binding
@@ -14,6 +14,7 @@ export class AppComponent {
   fontSize: number = 30;
   isItalic: boolean = true;
   name: string = 'Tom';
+  userText: string = 'Lukas';
 
   addStyles(){
     let styles = {

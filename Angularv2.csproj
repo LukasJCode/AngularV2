@@ -14,6 +14,11 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="4.4.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -29,10 +34,12 @@
 
   <ItemGroup>
     <None Remove="ClientApp\src\app\employee\employee.component.ts" />
+    <None Remove="ClientApp\src\app\employee\employee.service.ts" />
     <None Remove="ClientApp\src\app\employee\employee.ts" />
     <None Remove="ClientApp\src\app\employee\employeeCount.component.ts" />
     <None Remove="ClientApp\src\app\employee\employeeList.component.ts" />
     <None Remove="ClientApp\src\app\employee\employeeTitle.pipe.ts" />
+    <None Remove="ClientApp\src\app\employee\Others\simple.component.ts" />
   </ItemGroup>
 
   <ItemGroup>

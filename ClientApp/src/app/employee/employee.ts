@@ -5,4 +5,4 @@ export interface IEmployee {
   annualSalary: number;
   dateOfBirth: string;
 }
-
+ 

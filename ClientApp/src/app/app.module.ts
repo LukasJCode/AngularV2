@@ -13,6 +13,7 @@ import { EmployeeComponent } from './employee/employee.component';
 import { EmployeeListComponent } from './employee/employeeList.component';
 import { EmployeeTitlePipe } from './employee/employeeTitle.pipe';
 import { EmployeeCountComponent } from './employee/employeeCount.component';
+import { SimpleComponent } from './employee/Others/simple.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { EmployeeCountComponent } from './employee/employeeCount.component';
     NavMenuComponent,
     HomeComponent,
     CounterComponent,
+    SimpleComponent,
     FetchDataComponent
   ],
   imports: [
