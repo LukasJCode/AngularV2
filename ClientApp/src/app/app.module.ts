@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
+import { TestModule } from './test.module';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -17,6 +18,7 @@ import { SimpleComponent } from './employee/Others/simple.component';
 import { PageNotFoundComponent } from './employee/Others/pageNotFound.component';
 
 import { EmployeeService } from './employee/employee.service';
+import { UserPreferencesService } from './employee/userPreferences';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -43,6 +45,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
+    TestModule,
     FormsModule,
     RouterModule.forRoot(appRoutes)
   ],

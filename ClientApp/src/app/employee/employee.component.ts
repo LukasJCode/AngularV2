@@ -12,7 +12,7 @@ import { EmployeeService } from './employee.service';
 export class EmployeeComponent implements OnInit {
   employee: IEmployee;
   statusMessage: string = 'Loading data. Please wait...';
-
+  
   constructor(private employeeService: EmployeeService, private activatedRoute: ActivatedRoute) {
 
   }

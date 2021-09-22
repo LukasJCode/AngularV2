@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IEmployee } from './employee';
 import { EmployeeService } from './employee.service';
+import { UserPreferencesService } from './userPreferences';
 
 @Component({
   selector: 'list-employee',
@@ -14,7 +15,7 @@ export class EmployeeListComponent implements OnInit {
   selectedEmployeeCountRadioButton: string = 'All';
   statusMessage: string = 'Loading data. Please wait...';
 
-  constructor(private employeeService: EmployeeService) {
+  constructor(private employeeService: EmployeeService, private userPreferencesService: UserPreferencesService) {
     
   }
 
@@ -38,8 +39,17 @@ export class EmployeeListComponent implements OnInit {
   getTotalMaleEmployeesCount(): number {
     return this.employees.filter(e => e.gender === "Male").length;
   }
+
   getTotalFemaleEmployeesCount(): number {
     return this.employees.filter(e => e.gender === "Female").length;
+  }
+
+  get colour(): string {
+    return this.userPreferencesService.colourPreference;
+  }
+
+  set colour(colour: string) {
+    this.userPreferencesService.colourPreference = colour;
   }
 
 }
