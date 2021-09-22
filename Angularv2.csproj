@@ -39,6 +39,7 @@
     <None Remove="ClientApp\src\app\employee\employeeCount.component.ts" />
     <None Remove="ClientApp\src\app\employee\employeeList.component.ts" />
     <None Remove="ClientApp\src\app\employee\employeeTitle.pipe.ts" />
+    <None Remove="ClientApp\src\app\employee\Others\pageNotFound.component.ts" />
     <None Remove="ClientApp\src\app\employee\Others\simple.component.ts" />
   </ItemGroup>
 

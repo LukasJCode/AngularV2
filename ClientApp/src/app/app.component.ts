@@ -3,7 +3,18 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'my-app',
   template: `
-           <list-employee></list-employee>
+            <div style="padding:5px">
+              <ul class="nav nav-tabs">
+                  <li routerLinkActive="active" style="margin-left:5px">
+                      <a routerLink="home">Home</a>
+                  </li>
+                  <li routerLinkActive="active" style="margin-left:10px">
+                      <a routerLink="employees">Employees</a>
+                  </li>
+              </ul>
+              <br/>
+              <router-outlet></router-outlet>
+            </div>
 
 `
   //  <button [disabled] = 'isDisabled'> Click Me</button> //property binding

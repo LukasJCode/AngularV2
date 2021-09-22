@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -14,6 +14,17 @@ import { EmployeeListComponent } from './employee/employeeList.component';
 import { EmployeeTitlePipe } from './employee/employeeTitle.pipe';
 import { EmployeeCountComponent } from './employee/employeeCount.component';
 import { SimpleComponent } from './employee/Others/simple.component';
+import { PageNotFoundComponent } from './employee/Others/pageNotFound.component';
+
+import { EmployeeService } from './employee/employee.service';
+
+const appRoutes: Routes = [
+  { path: 'home', component: HomeComponent },
+  { path: 'employees', component: EmployeeListComponent },
+  { path: 'employees/:code', component: EmployeeComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', component: PageNotFoundComponent },
+]
 
 @NgModule({
   declarations: [
@@ -26,19 +37,16 @@ import { SimpleComponent } from './employee/Others/simple.component';
     HomeComponent,
     CounterComponent,
     SimpleComponent,
+    PageNotFoundComponent,
     FetchDataComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
-    ])
+    RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [EmployeeService],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
