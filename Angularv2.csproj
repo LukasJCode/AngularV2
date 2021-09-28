@@ -41,6 +41,8 @@
     <None Remove="ClientApp\src\app\employee\employeeTitle.pipe.ts" />
     <None Remove="ClientApp\src\app\employee\Others\pageNotFound.component.ts" />
     <None Remove="ClientApp\src\app\employee\Others\simple.component.ts" />
+    <None Remove="ClientApp\src\app\employee\userPreferences.ts" />
+    <None Remove="ClientApp\src\app\test.module.ts" />
   </ItemGroup>
 
   <ItemGroup>
